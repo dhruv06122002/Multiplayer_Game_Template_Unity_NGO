@@ -1,4 +1,4 @@
-# Tanko_io
+# Tanko_io (UNDER DEVELOPMENT)
 
 ![Tanko_io Logo](path_to_logo_image)
 
