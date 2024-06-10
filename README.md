@@ -31,7 +31,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions, suggestions, or feedback, feel free to contact us at [your-email@example.com](mailto:dhruvpitwala@gmail.com).
+If you have any questions, suggestions, or feedback, feel free to contact us at [dhruvpitwala@gmail.com](mailto:dhruvpitwala@gmail.com).
 
 ---
 
