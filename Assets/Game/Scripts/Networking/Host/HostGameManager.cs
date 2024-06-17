@@ -14,7 +14,7 @@ using Unity.Services.Lobbies.Models;
 using System.Text;
 using Unity.Services.Authentication;
 
-public class HostGameManager
+public class HostGameManager : IDisposable
 {
 
     private Allocation allocation;
@@ -108,5 +108,27 @@ public class HostGameManager
             Lobbies.Instance.SendHeartbeatPingAsync(LobbyId);
             yield return delay;
         }
+    }
+
+    public async void Dispose()
+    {
+        HostSingleton.Instance.StopCoroutine(nameof(HearbeatLobby));
+
+        if(!string.IsNullOrEmpty(LobbyId))
+        {
+            try
+            {
+                await Lobbies.Instance.DeleteLobbyAsync(LobbyId);
+            }
+            catch(LobbyServiceException e)
+            {
+                Debug.Log(e);
+
+            }
+
+            LobbyId = string.Empty;
+        }
+
+        networkServer?.Dispose();
     }
 }
