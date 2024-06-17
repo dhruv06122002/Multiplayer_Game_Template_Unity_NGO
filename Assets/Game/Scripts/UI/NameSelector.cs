@@ -12,7 +12,7 @@ public class NameSelector : MonoBehaviour
     [SerializeField] private int minNameLenght = 1;
     [SerializeField] private int maxNameLenght = 12;
 
-    private const string PlayerNameKey = "PlayerName";
+    public const string PlayerNameKey = "PlayerName";
     private void Start()
     {
         if(SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null)
